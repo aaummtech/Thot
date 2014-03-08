@@ -19,6 +19,8 @@
 		27C3AA9718CB8ED000D46544 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3AA7F18CB8ECF00D46544 /* UIKit.framework */; };
 		27C3AA9F18CB8ED000D46544 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27C3AA9D18CB8ED000D46544 /* InfoPlist.strings */; };
 		27C3AAA118CB8ED000D46544 /* thotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C3AAA018CB8ED000D46544 /* thotTests.m */; };
+		27C3AAAC18CB935E00D46544 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C3AAAB18CB935E00D46544 /* TimeLineViewController.m */; };
+		27C3AAAF18CB94C500D46544 /* ThotComposingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C3AAAE18CB94C500D46544 /* ThotComposingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		27C3AA9C18CB8ED000D46544 /* thotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "thotTests-Info.plist"; sourceTree = "<group>"; };
 		27C3AA9E18CB8ED000D46544 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27C3AAA018CB8ED000D46544 /* thotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thotTests.m; sourceTree = "<group>"; };
+		27C3AAAA18CB935E00D46544 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
+		27C3AAAB18CB935E00D46544 /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
+		27C3AAAD18CB94C500D46544 /* ThotComposingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThotComposingView.h; sourceTree = "<group>"; };
+		27C3AAAE18CB94C500D46544 /* ThotComposingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThotComposingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 				27C3AA8B18CB8ECF00D46544 /* AppDelegate.m */,
 				27C3AA8D18CB8ECF00D46544 /* Images.xcassets */,
 				27C3AA8218CB8ECF00D46544 /* Supporting Files */,
+				27C3AAAA18CB935E00D46544 /* TimeLineViewController.h */,
+				27C3AAAB18CB935E00D46544 /* TimeLineViewController.m */,
+				27C3AAAD18CB94C500D46544 /* ThotComposingView.h */,
+				27C3AAAE18CB94C500D46544 /* ThotComposingView.m */,
 			);
 			path = thot;
 			sourceTree = "<group>";
@@ -240,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C3AA8C18CB8ECF00D46544 /* AppDelegate.m in Sources */,
+				27C3AAAC18CB935E00D46544 /* TimeLineViewController.m in Sources */,
 				27C3AA8818CB8ECF00D46544 /* main.m in Sources */,
+				27C3AAAF18CB94C500D46544 /* ThotComposingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +377,7 @@
 				GCC_PREFIX_HEADER = "thot/thot-Prefix.pch";
 				INFOPLIST_FILE = "thot/thot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -378,6 +391,7 @@
 				GCC_PREFIX_HEADER = "thot/thot-Prefix.pch";
 				INFOPLIST_FILE = "thot/thot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
