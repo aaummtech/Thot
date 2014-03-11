@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ThotComposingView : UIView<UITextViewDelegate>
-@property (nonatomic,strong)UITextView *thotComposerTextView;
+
+@property (nonatomic,strong) UITextView  *thotComposerTextView;
+@property (nonatomic,strong) UIButton    *submitButton;
 
 @end

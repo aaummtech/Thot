@@ -10,6 +10,7 @@
 
 @implementation ThotComposingView
 @synthesize thotComposerTextView;
+@synthesize submitButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -18,19 +19,35 @@
         // Initialization code
         
         //A view to compose your Thot - UITextView allows us to enter multiple lines of text.
-        //This
+        
         thotComposerTextView = [[UITextView alloc] init];
         
-        thotComposerTextView.frame = CGRectMake(self.bounds.origin.x +10, self.bounds.origin.y+
-                                                10, self.bounds.size.width - 60, self.bounds.size.height - 60);
         
-        thotComposerTextView.center = self.center;
+        thotComposerTextView.frame = CGRectMake(10,10,300,self.frame.size.height-50);
+        
+        //thotComposerTextView.center = self.center;
         
         thotComposerTextView.text = @"Share Your Thots!!!";
         
         thotComposerTextView.textColor = [UIColor lightGrayColor];
         
         thotComposerTextView.delegate = self;
+        
+        
+        submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [submitButton setFrame:CGRectMake(self.frame.size.width - 80, 120, 70, 20)];
+        
+        [submitButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+ 
+        
+        [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        
+        [submitButton setTitle:@"Think it!" forState:UIControlStateNormal];
+        [self addSubview:submitButton];
+        	
+        
+        [self addSubview:thotComposerTextView];
         
         
         
@@ -58,6 +75,23 @@
             
         }
 }
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [thotComposerTextView resignFirstResponder];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

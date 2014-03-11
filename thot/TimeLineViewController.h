@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThotComposingView.h"
 
 @interface TimeLineViewController : UIViewController
+@property (nonatomic,strong) ThotComposingView *thotComposingView;
 
 @end
