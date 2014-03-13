@@ -22,17 +22,33 @@ float firstY;
     if (self) {
         // Custom initialization
         pullerView = [[UIView alloc] initWithFrame:CGRectMake(0, -800, self.view.frame.size.width, 1000)];
+      
         
-        [pullerView setBackgroundColor:[UIColor blackColor]];
+        [pullerView setBackgroundColor:[UIColor clearColor]];
         pullerView.alpha = 0.7;
+
+        UIView *actualPullerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 50, 800,50, 175)];
+        [actualPullerView setBackgroundColor:[UIColor blackColor]];
+        actualPullerView.layer.cornerRadius = 25.0f;
+        actualPullerView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+        actualPullerView.layer.shadowRadius = 2.0f;
+        actualPullerView.layer.shadowOpacity = 1.0f;
+        
+        
+        
         
         ThotComposingView *thotComposingView = [[ThotComposingView alloc] initWithFrame:CGRectMake(0, 800, self.view.frame.size.width, 150)];
+
         
         UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
         [panGestureRecognizer addTarget:self action:@selector(panGestureRecognizerAction:)];
         [pullerView addGestureRecognizer:panGestureRecognizer];
         
         [thotComposingView setBackgroundColor:[UIColor redColor]];
+
+        
+
+        [pullerView addSubview:actualPullerView];
         [pullerView addSubview:thotComposingView];
         [self.view addSubview:pullerView];
         
@@ -76,6 +92,7 @@ float firstY;
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
         if(translatedPoint.y - finalY < 0){
         
+//            [[sender view] setCenter:CGPointMake([sender view].center.x, -300)];
             [[sender view] setCenter:CGPointMake([sender view].center.x, -300)];
         }else{
     

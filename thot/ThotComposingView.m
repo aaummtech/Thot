@@ -23,7 +23,8 @@
         thotComposerTextView = [[UITextView alloc] init];
         
         
-        thotComposerTextView.frame = CGRectMake(10,10,300,self.frame.size.height-50);
+       thotComposerTextView.frame = CGRectMake(10,10,300,self.frame.size.height-50);
+
         
         //thotComposerTextView.center = self.center;
         
@@ -48,9 +49,7 @@
         	
         
         [self addSubview:thotComposerTextView];
-        
-        
-        
+
     }
     return self;
 }
