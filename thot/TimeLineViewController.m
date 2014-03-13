@@ -27,17 +27,18 @@ float firstY;
         [pullerView setBackgroundColor:[UIColor clearColor]];
         pullerView.alpha = 0.7;
 
-        UIView *actualPullerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 50, 800,50, 175)];
+        UIView *actualPullerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 75, 800,75, 175)];
         [actualPullerView setBackgroundColor:[UIColor blackColor]];
         actualPullerView.layer.cornerRadius = 25.0f;
-        actualPullerView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-        actualPullerView.layer.shadowRadius = 2.0f;
+        actualPullerView.layer.shadowColor = [UIColor blackColor].CGColor;
+        actualPullerView.layer.shadowRadius = 5.0f;
         actualPullerView.layer.shadowOpacity = 1.0f;
+        actualPullerView.layer.shadowOffset = CGSizeMake(0, 5);
         
         
         
         
-        ThotComposingView *thotComposingView = [[ThotComposingView alloc] initWithFrame:CGRectMake(0, 800, self.view.frame.size.width, 150)];
+        ThotComposingView *thotComposingView = [[ThotComposingView alloc] initWithFrame:CGRectMake(0,800, self.view.frame.size.width, 150)];
 
         
         UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
